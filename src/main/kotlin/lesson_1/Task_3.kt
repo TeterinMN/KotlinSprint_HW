@@ -2,8 +2,11 @@ package lesson_1
 
 fun main() {
     val year = 1961
-    val hour = "09"
-    val minute = "07"
+    var hour = "09"
+    var minute = "07"
 
     println("$year\n$hour\n$minute")
+    hour = "10"
+    minute = "55"
+    println("\nГод полета $year\nПосадка $hour:$minute")
 }
