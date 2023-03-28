@@ -6,5 +6,7 @@ fun main (){
     println("Заказ №$orderNumber, $gratitudeText")
 
     var workers = 2000
-    println("В нашем интернет магазине работает $workers работников!")
+//    println("В нашем интернет магазине работает $workers работников!")
+    workers = 1999
+    println("Из нашего интернет магазина один работник уволился, осталось $workers работников!")
 }
