@@ -8,5 +8,5 @@ fun main() {
     println("$year\n$hour\n$minute")
     hour = "10"
     minute = "55"
-    println("\nГод полета $year\nПосадка $hour:$minute")
+    println("$year\n$hour:$minute")
 }
