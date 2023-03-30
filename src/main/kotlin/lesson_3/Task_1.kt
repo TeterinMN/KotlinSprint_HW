@@ -5,6 +5,7 @@ fun main (){
     val textPm = "Добрый вечер"
     val nameUser = "Михаил"
     var result = "$textAm, $nameUser!"
+
     println(result)
     result = "$textPm, $nameUser!"
     println(result)
