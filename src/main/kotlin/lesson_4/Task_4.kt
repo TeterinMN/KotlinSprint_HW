@@ -1,16 +1,15 @@
 package lesson_4
 
-fun main () {
-    val day = 4
-    val hands = day % 2 == 1
-    val legs = day % 2 == 0
-    val spine = day % 2 == 0
-    val press = day % 2 == 1
+fun main() {
+    val day = 5
+    val isEven = day % 2 == 0
 
-    println("""
-        Упражнения для рук:    $hands
-        Упражнения для ног:    $legs
-        Упражнения для спины:  $spine
-        Упражнения для пресса: $press
-    """.trimIndent())
+    println(
+        """
+        Упражнения для рук:    ${!isEven}
+        Упражнения для ног:    $isEven
+        Упражнения для спины:  $isEven
+        Упражнения для пресса: ${!isEven}
+    """.trimIndent()
+    )
 }
