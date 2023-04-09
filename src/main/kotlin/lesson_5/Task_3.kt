@@ -9,7 +9,8 @@ fun main() {
     print("Введите второе число: ")
     val numberTwo = readln().toInt()
 
-    if (numberOne == NUM_ONE && numberTwo == NUM_TWO) println("Вы выиграли главный приз!")
+    if (numberOne == NUM_ONE && numberTwo == NUM_TWO || numberOne == NUM_TWO && numberTwo == NUM_ONE)
+        println("Вы выиграли главный приз!")
     else if (numberOne == NUM_ONE || numberTwo == NUM_TWO) println("Вы выиграли утешительный приз!")
     else println("Неудача! Крутите барабан!")
 }
