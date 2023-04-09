@@ -13,7 +13,8 @@ fun main() {
 
     if (numberOne == numOne && numberTwo == numTwo || numberTwo == numOne && numberOne == numTwo)
         println("Вы выиграли главный приз!")
-    else if (numberOne == numOne || numberTwo == numTwo) println("Вы выиграли утешительный приз!")
+    else if (numberOne == numOne || numberTwo == numTwo && numberTwo == numOne || numberOne == numTwo)
+        println("Вы выиграли утешительный приз!")
     else println("Неудача! Крутите барабан!")
 
     println("Выйгрышные числа: $numOne и $numTwo")
