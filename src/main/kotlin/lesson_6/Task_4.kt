@@ -9,7 +9,7 @@ import kotlin.random.Random
 */
 fun main() {
     val number = Random.nextInt(1, 10)
-    var count =0
+    var count = 0
     while (count < 5) {
         print("Вам нужно угадать число в промежутке от 1 до 9\nУ Вас есть 5 попыток. Введите число: >>")
         val userNumber = readln().toInt()
@@ -19,6 +19,6 @@ fun main() {
             break
         }
         count++
+        if (count == 5) println("Было загадано число $number")
     }
-    println("Было загадано число $number")
 }
