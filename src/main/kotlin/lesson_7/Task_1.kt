@@ -8,12 +8,7 @@ fun main() {
     val number3: IntRange = 1..10
     val symbol3: CharRange = 'a'..'z'
 
-    val n1 = number1.random()
-    val s1 = symbol1.random()
-    val n2 = number2.random()
-    val s2 = symbol2.random()
-    val n3 = number3.random()
-    val s3 = symbol3.random()
-
-    print("$n1$s1$n2$s2$n3$s3")
+    print("${number1.random()}${symbol1.random()}" +
+            "${number2.random()}${symbol2.random()}" +
+            "${number3.random()}${symbol3.random()}")
 }
