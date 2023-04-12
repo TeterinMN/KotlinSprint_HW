@@ -11,6 +11,6 @@ fun main() {
         if (answer == userCode) {
             println("Вы успешно авторизовались!")
             break
-        } else continue
+        }
     }
 }
