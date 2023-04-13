@@ -18,7 +18,6 @@ import kotlin.random.Random
  */
 
 fun main() {
-
     var attempts = 3
 
     while (attempts > 0) {
