@@ -18,11 +18,10 @@ import kotlin.random.Random
  */
 
 fun main() {
-    var count = 0
-    val attempts = 3
+    var attempts = 3
 
-    while (count < attempts) {
-        count++
+    while (attempts > 0) {
+        attempts--
         val a = Random.nextInt(1, 10)
         val b = Random.nextInt(1, 10)
         print("Для входа в приложение решите пример, у вас сть три попытки: $a + $b = ")
@@ -31,7 +30,7 @@ fun main() {
         if (answer == result) {
             println("Добро пожаловать!")
             break
-        } else if (count == attempts) {
+        } else if (attempts == 0) {
             println("Доступ запрещен.")
             break
         }
