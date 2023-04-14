@@ -13,16 +13,16 @@ package lesson_8
 fun main() {
     val arrayIngredients =
         arrayOf("картофель", "сосиски", "помидоры", "сыр", "майонез", "чеснок", "паприка", "соль", "перец")
-    
+
     print("Введите название ингредиента: >> ")
     val userQuestion = readln()
-    
+
     for (i in arrayIngredients) {
         if (i == userQuestion) {
             println("Ингредиент $i в рецепте есть")
             return
         }
-        
+
     }
     println("Такого ингредиента в рецепте нет")
 }
