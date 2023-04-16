@@ -11,9 +11,9 @@ package lesson_9
 fun main() {
     print("Введите 5 ингредиентов через запятую: >> ")
     val list = readln()
-    val userEnter = list.split(",").map { it.trim() } as MutableList<String>
-    userEnter.sort()
-    userEnter.forEach {
-        print("$it, ")
-    }
+    val userEnter = list.split(",").map { it.trim() }.sorted()
+    val printer = userEnter.joinToString(", ")
+
+    print(printer)
+
 }
