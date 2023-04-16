@@ -19,8 +19,6 @@ fun main() {
         }
     }
     val listSorted = listIngredients.sorted().map { it.replaceFirstChar { it.uppercase() } }
-    listSorted.forEach {
-        print("$it ")
-    }
-    print(".")
+    val result = listSorted.joinToString(", ")
+    print("$result.")
 }
