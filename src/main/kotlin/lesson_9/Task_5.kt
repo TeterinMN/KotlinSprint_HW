@@ -18,7 +18,7 @@ fun main() {
             listIngredients.add(ingredient)
         }
     }
-    val listSorted = listIngredients.sorted().map { it.replaceFirstChar { it.uppercase() } }
-    val result = listSorted.joinToString(", ")
-    print("$result.")
+    val listSorted = listIngredients.sorted()
+    val firstIngredient = listSorted.first().replaceFirstChar { it.uppercase() }
+    println("$firstIngredient, ${listSorted.drop(1).joinToString(", ")}")
 }
