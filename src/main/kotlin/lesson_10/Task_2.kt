@@ -8,17 +8,18 @@ package lesson_10
  – если пароль меньше 4 символов – вывести сообщение: "Логин или пароль недостаточно длинные".
  */
 
+const val MIN_LENGTH = 4
 fun main() {
     println("Для регистрации придумайте логин и пароль, не менее 4 символов")
     print("Логин: ")
     val userLogin = readln()
     print("Пароль: ")
     val userPassword = readln()
-    userCheck(userLogin, userPassword)
-}
-
-fun userCheck(login: String, password: String) {
-    if (login.length < 4 || password.length < 4)
+    if (checkingLengthPasswordLogin(userLogin, userPassword))
         println("Логин или пароль недостаточно длинные")
     else println("Добро пожаловать!")
+}
+
+fun checkingLengthPasswordLogin(login: String, password: String): Boolean {
+    return  login.length < MIN_LENGTH || password.length < MIN_LENGTH
 }
