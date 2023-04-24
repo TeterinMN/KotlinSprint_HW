@@ -18,12 +18,13 @@ fun main() {
 }
 
 fun passwordGenerator(length: Int) {
+    var temp: Int
     val number = 0 until 10
-    val symbol = listOf('!', '#', '$', '%', ' ', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/', '"')
+    val sym: CharRange = ' ' .. '@'
     val result = mutableListOf<String>()
     for (i in 1..length / 2) {
         result.add(number.random().toString())
-        result.add(symbol.random().toString())
+        result.add(sym.random().toString())
     }
     print("Ваш пароль: ")
     result.forEach { print(it) }
