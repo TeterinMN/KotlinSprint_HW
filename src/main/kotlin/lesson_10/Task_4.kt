@@ -19,11 +19,13 @@ fun main() {
         print("Бросок компьютера, выпало - ")
         val machine = round()
         if (human > machine) count++
+        resultRound(human, machine)
         println("Хотите бросить кости еще раз? Введите Да или Нет")
         val answer = readln()
-        if (answer == "да") println("Продолжаем игру")
-        else {
-            resultGame(human, machine, count)
+        if (answer == "да") {
+            println("Продолжаем игру")
+        } else {
+            println("Человек победил $count раз")
             break
         }
     }
@@ -36,13 +38,13 @@ fun randomValue(): Int {
 fun round(): Int {
     val diceOne = randomValue()
     val diceTwo = randomValue()
-    println("$diceOne и $diceTwo")
+    println("$diceOne и $diceTwo = ${diceOne + diceTwo}")
     Thread.sleep(1000)
     return diceOne + diceTwo
 }
 
-fun resultGame(human: Int, machine: Int, count: Int) {
-    return if (human > machine) print("Победил человек $count раз")
+fun resultRound(human: Int, machine: Int) {
+    return if (human > machine) println("Победил человек")
     else if (human == machine) println("Победила дружба")
     else println("Победил компьютер")
 }
