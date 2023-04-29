@@ -22,7 +22,7 @@ package lesson_10
 const val LOGIN_MIN_LENGTH = 4
 const val PWD_MIN_LENGTH = 4
 fun main() {
-    var login = ""
+    var login: String
     println("Для регистрации придумайте логин и сгенерируйте пароль")
     while (true) {
         print(" Логин: >> ")
@@ -65,19 +65,28 @@ fun authorization(loginUser: String, passwordUser: String) {
             println("Неверно введен логин или пароль!")
         else {
             while (true) {
-                val sms = smsGenerator().toString()
+                val sms = smsGenerator()
                 println(sms)
                 print("Введите код подтверждения: >> ")
                 val smsUser = readln()
-                if (sms != smsUser) println("Повторите ввод кода!")
-                else println("Вы успешно авторизовались!")
-                break
+                if (sms != smsUser) {
+                    println("Повторите ввод кода!")
+                } else {
+                    println("Вы успешно авторизовались!")
+                    break
+                }
             }
         }
         break
     }
 }
 
-fun smsGenerator(): Int {
-    return (1..4).random()
+fun smsGenerator(): String {
+    var result = ""
+    while (result.length < 4) {
+        val sms = (0..4).random()
+        val temp = sms.toString()
+        result += temp
+    }
+    return result
 }
