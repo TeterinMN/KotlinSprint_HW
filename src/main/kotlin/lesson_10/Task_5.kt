@@ -25,12 +25,12 @@ var userLogin = ""
 var userPassword = ""
 
 fun main() {
-    userRegistration()
-    userAuthorization()
-    smsGenerator()
+    startRegistrationUser()
+    authorizeTheUser()
+    generateKey()
 }
 
-fun userRegistration() {
+fun startRegistrationUser() {
     do {
         print("Придумайте логин >> ")
         userLogin = readln()
@@ -47,7 +47,7 @@ fun userRegistration() {
     println()
 }
 
-fun userAuthorization() {
+fun authorizeTheUser() {
     var login: String
     var password: String
     do {
@@ -60,7 +60,7 @@ fun userAuthorization() {
     } while (userLogin != login || userPassword != password)
 }
 
-fun smsGenerator() {
+fun generateKey() {
     while (true) {
         val result = (1000..9999).random().toString()
         println()
